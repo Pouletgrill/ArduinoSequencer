@@ -29,7 +29,8 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.BTN_Add = new System.Windows.Forms.Button();
+            this.BTN_Create = new System.Windows.Forms.Button();
+            this.BTN_Update = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -41,22 +42,33 @@
             this.dataGridView1.Size = new System.Drawing.Size(491, 384);
             this.dataGridView1.TabIndex = 0;
             // 
-            // BTN_Add
+            // BTN_Create
             // 
-            this.BTN_Add.Location = new System.Drawing.Point(58, 124);
-            this.BTN_Add.Name = "BTN_Add";
-            this.BTN_Add.Size = new System.Drawing.Size(75, 23);
-            this.BTN_Add.TabIndex = 1;
-            this.BTN_Add.Text = "Add";
-            this.BTN_Add.UseVisualStyleBackColor = true;
-            this.BTN_Add.Click += new System.EventHandler(this.BTN_Add_Click);
+            this.BTN_Create.Location = new System.Drawing.Point(59, 131);
+            this.BTN_Create.Name = "BTN_Create";
+            this.BTN_Create.Size = new System.Drawing.Size(75, 23);
+            this.BTN_Create.TabIndex = 1;
+            this.BTN_Create.Text = "Add";
+            this.BTN_Create.UseVisualStyleBackColor = true;
+            this.BTN_Create.Click += new System.EventHandler(this.BTN_Create_Click);
+            // 
+            // BTN_Update
+            // 
+            this.BTN_Update.Location = new System.Drawing.Point(59, 160);
+            this.BTN_Update.Name = "BTN_Update";
+            this.BTN_Update.Size = new System.Drawing.Size(75, 23);
+            this.BTN_Update.TabIndex = 2;
+            this.BTN_Update.Text = "Modify";
+            this.BTN_Update.UseVisualStyleBackColor = true;
+            this.BTN_Update.Click += new System.EventHandler(this.BTN_Update_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(704, 547);
-            this.Controls.Add(this.BTN_Add);
+            this.Controls.Add(this.BTN_Update);
+            this.Controls.Add(this.BTN_Create);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -68,7 +80,8 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button BTN_Add;
+        private System.Windows.Forms.Button BTN_Create;
+        private System.Windows.Forms.Button BTN_Update;
     }
 }
 

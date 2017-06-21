@@ -17,9 +17,21 @@ namespace ArduinoSequencer
             InitializeComponent();
         }
 
-        private void BTN_Add_Click(object sender, EventArgs e)
+        private void BTN_Create_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("salut");
+            CRUD_Dialog cruddialog = new CRUD_Dialog();
+            cruddialog.ShowDialog(); //Show dialog pause le code
+            MessageBox.Show(cruddialog.GetPulse.duration.ToString());
+        }
+
+        private void BTN_Update_Click(object sender, EventArgs e)
+        {
+            PulseClass test = new PulseClass(false,666);
+
+            CRUD_Dialog cd = new CRUD_Dialog(test);
+            cd.ShowDialog(); //Show dialog pause le code
+            PulseClass xebit = cd.GetPulse;
+            MessageBox.Show(xebit.duration.ToString());
         }
     }
 }

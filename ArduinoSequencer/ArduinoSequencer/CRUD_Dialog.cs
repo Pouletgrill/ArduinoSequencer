@@ -12,14 +12,25 @@ namespace ArduinoSequencer
 {
     public partial class CRUD_Dialog : Form
     {
-
+        PulseClass pulse;
         public CRUD_Dialog(PulseClass entree)
         {
+            pulse = entree;
+            pulse.duration += 1;
             InitializeComponent();
         }
         public CRUD_Dialog()
         {
+            pulse = new PulseClass(true, 1);
             InitializeComponent();
+        }
+
+        public PulseClass GetPulse
+        {
+            get
+            {
+                return pulse;
+            }
         }
     }
 }
