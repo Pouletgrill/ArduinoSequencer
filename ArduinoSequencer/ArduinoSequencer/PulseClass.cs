@@ -14,10 +14,18 @@ namespace ArduinoSequencer
 
         public PulseClass(int p_pin, bool p_output, int p_duration)
         {
-            pin = pin;
+            pin = p_pin;
             output = p_output;
             duration = p_duration;
 
+        }
+
+        public string PulseToCode()
+        {
+            string result = "digitalWrite(" + pin + "," + (output ? "HIGH" : "LOW") + ");\n";
+            //result += "delay(" + duration + ");\n";
+            //result += "digitalWrite(" + pin + "," + (!output ? "HIGH" : "LOW") + ");\n";
+            return result;
         }
 
     }

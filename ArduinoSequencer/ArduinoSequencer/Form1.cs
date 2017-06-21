@@ -21,17 +21,17 @@ namespace ArduinoSequencer
         {
             CRUD_Dialog cruddialog = new CRUD_Dialog();
             cruddialog.ShowDialog(); //Show dialog pause le code
-            MessageBox.Show(cruddialog.GetPulse.duration.ToString());
+            MessageBox.Show(cruddialog.GetPulse.PulseToCode());
         }
 
         private void BTN_Update_Click(object sender, EventArgs e)
         {
-            PulseClass test = new PulseClass(false,666);
+            PulseClass test = new PulseClass(12,false,666);
 
             CRUD_Dialog cd = new CRUD_Dialog(test);
             cd.ShowDialog(); //Show dialog pause le code
             PulseClass xebit = cd.GetPulse;
-            MessageBox.Show(xebit.duration.ToString());
+            MessageBox.Show(cd.GetPulse.PulseToCode());
         }
     }
 }

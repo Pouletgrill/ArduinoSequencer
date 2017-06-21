@@ -16,12 +16,11 @@ namespace ArduinoSequencer
         public CRUD_Dialog(PulseClass entree)
         {
             pulse = entree;
-            pulse.duration += 1;
             InitializeComponent();
         }
         public CRUD_Dialog()
         {
-            pulse = new PulseClass(true, 1);
+            pulse = new PulseClass(4,true, 400);
             InitializeComponent();
         }
 
