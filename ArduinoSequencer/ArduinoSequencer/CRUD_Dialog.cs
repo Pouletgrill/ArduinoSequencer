@@ -20,16 +20,17 @@ namespace ArduinoSequencer
         }
         public CRUD_Dialog()
         {
-            pulse = new PulseClass(4,true, 400);
             InitializeComponent();
+        }
+
+        private void BTN_Ok_Click(object sender, EventArgs e)
+        {
+            pulse = new PulseClass(Convert.ToInt32(CB_Pin.Text), (CB_Output.Text == "HIGH" ? true : false), Convert.ToInt32(NUD_Duration.Value));
         }
 
         public PulseClass GetPulse
         {
-            get
-            {
-                return pulse;
-            }
+            get{ return pulse;}
         }
     }
 }
